@@ -1,8 +1,9 @@
 var express = require('express');
+var os = require("os");
 app = express();
 
 app.get('/', function (req, res) {
-  res.send('Hello World!\n');
+  res.send('Hello World!\n' + os.hostname());
 });
 
 app.get('/mars', function (req, res) {
