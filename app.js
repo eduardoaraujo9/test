@@ -3,7 +3,7 @@ var os = require("os");
 app = express();
 
 app.get('/', function (req, res) {
-  res.send('Hello World v2!\n' + os.hostname());
+  res.send('Hello World v2!\n' + os.hostname() + '\n' + process.env.DB_CONFIG);
 });
 
 app.get('/mars', function (req, res) {
